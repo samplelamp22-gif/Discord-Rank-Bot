@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: discord-bot
+    env: python
+    buildCommand: pip install -r render-requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: REQUIRED_ROLE_ID
+        sync: false
+      - key: ROLE1_OPTION1_ID
+        sync: false
+      - key: ROLE1_OPTION2_ID
+        sync: false
+      - key: ROLE2_OPTION1_ID
+        sync: false
+      - key: ROLE2_OPTION2_ID
+        sync: false
+      - key: ROLE2_OPTION3_ID
+        sync: false
+      - key: ROLE3_OPTION1_ID
+        sync: false
+      - key: ROLE3_OPTION2_ID
+        sync: false
+      - key: ROLE3_OPTION3_ID
+        sync: false
+      - key: TEMPORARY_ROLE_ID
+        sync: false
